@@ -1,0 +1,16 @@
+{
+  "name": "threejs-playground",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.7.2"
+  },
+  "dependencies": {
+    "physijs": "^1.0.4",
+    "three": "^0.137.5"
+  }
+}
