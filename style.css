@@ -3,9 +3,30 @@ html {
   scroll-behavior: smooth;
 }
 
+#site-header {
+  position: fixed;
+  height: 52px;
+  background: #000;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all .3s ease;
+  box-shadow: 0 1px 25px rgba(0,0,0, .1);
+}
+#site-header.hide {
+  top: -53px;
+}
+
 .body {
   margin: 0;
   min-height: calc(3000px + 100vh);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.body::-webkit-scrollbar {
+  display: none;
 }
 
 canvas {

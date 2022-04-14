@@ -1,7 +1,7 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { loadGLTF } from './importAssets';
+import { loadGLTF } from './scripts/importAssets';
 
 const SCROLL_SPEED = 0.01 //Pixel/frame
 const SCROLL_LENGTH = 3000 //Pixels available to scroll (.body min-height)
