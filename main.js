@@ -52,6 +52,10 @@ const street = await loadGLTF('models/Street.glb')
 street.position.set(2, 0, 30);
 scene.add(street);
 
+const constructionSign = await loadGLTF('models/constructionSign.glb')
+constructionSign.position.set(-2, 0, 0)
+scene.add(constructionSign);
+
 // METER SCALE BOX
 const meterBox = new THREE.Mesh(
   new THREE.BoxGeometry(1, 1, 1),
@@ -59,7 +63,7 @@ const meterBox = new THREE.Mesh(
     wireframe: true
   })
 )
-scene.add(meterBox);
+// scene.add(meterBox);
 
 //ORBIT CONTROLS
 //const controls = new OrbitControls(camera, renderer.domElement)
@@ -102,3 +106,14 @@ animate()
 window.addEventListener("scroll", function() {
   currentScrollPosition = window.pageYOffset / 3000
 })
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize(){
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
